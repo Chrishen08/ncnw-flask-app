@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Submitted</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #262626;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #c084fc;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        img {
+            width: 500px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Application Submitted</h2>
+
+    <p>
+        Thank you for submitting your membership application.
+    </p>
+
+    <p>
+        To complete your registration, please submit your membership payment using Zelle.
+    </p>
+
+    <p>
+        You can scan the QR code below using your mobile device to proceed with payment.
+    </p>
+
+    <img src="{{ url_for('static', filename='zelle_logo.png') }}" alt="Zelle QR Code">
+
+    <p style="margin-top: 20px;">
+        If you have any questions, please contact a member of the executive board.
+    </p>
+
+</div>
+
+</body>
+</html>
