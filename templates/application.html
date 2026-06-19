@@ -11,7 +11,6 @@
             padding: 30px;
         }
 
-        /* CENTER CONTAINER */
         .container {
             max-width: 500px;
             margin: 0 auto;
@@ -31,7 +30,6 @@
             margin-bottom: 20px;
         }
 
-        /* INPUT FIELDS */
         input, select, textarea {
             width: 100%;
             padding: 10px;
@@ -47,7 +45,6 @@
             height: 70px;
         }
 
-        /* BUTTON */
         button {
             padding: 10px 16px;
             background-color: #9333ea;
@@ -71,7 +68,6 @@
             text-align: left;
         }
 
-        /* OPTIONAL NOTE TEXT */
         .note {
             font-size: 12px;
             color: #bbb;
@@ -94,29 +90,42 @@
     <form method="POST" action="/submit_application">
 
         <input type="text" name="first_name" placeholder="First Name" required>
+
         <input type="text" name="last_name" placeholder="Last Name" required>
 
         <input type="email" name="email" placeholder="Email" required>
+
         <input type="text" name="phone" placeholder="Phone">
 
         <input type="text" name="address" placeholder="Address">
+
         <input type="text" name="city" placeholder="City">
+
         <input type="text" name="state" placeholder="State">
+
         <input type="text" name="zip" placeholder="Zip">
 
         <label>Membership Type:</label>
 
         <p class="note">
-            Note: $20 of each membership fee is allocated to local section dues. The remaining balance is submitted as national dues.
+            Note: $20 of each membership fee is allocated to local section dues.
+            The remaining balance is submitted as national dues.
         </p>
 
-        <select name="membership_type_id">
+        <select name="membership_type_id" required>
             <option value="1">Annual - $95</option>
             <option value="2">Life - $1,020</option>
             <option value="3">Legacy Life - $1,520</option>
+            <option value="4">Per Capita - $45</option>
         </select>
 
-        <input type="text" name="member_status" placeholder="New / Renewal">
+        <label>Membership Status:</label>
+
+        <select name="member_status" required>
+            <option value="">Select Status</option>
+            <option value="New">New</option>
+            <option value="Renewal">Renewal</option>
+        </select>
 
         <textarea name="comments" placeholder="Comments"></textarea>
 
